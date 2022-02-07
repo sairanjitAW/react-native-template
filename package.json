@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "android": "npx react-native run-android",
-    "ios": "npx react-native run-ios --device",
+    "ios": "npx react-native run-ios",
+    "ios:device": "npx react-native run-ios --device",
     "start": "npx react-native start --reset-cache",
     "test": "jest",
     "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx --color .",

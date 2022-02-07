@@ -8,6 +8,7 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
+    "pre-commit-lint": "npx lint-staged",
     "prepare": "husky install"
   },
   "dependencies": {

@@ -3,13 +3,17 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "start": "react-native start",
+    "android": "npx react-native run-android",
+    "ios": "npx react-native run-ios --device",
+    "start": "npx react-native start --reset-cache",
     "test": "jest",
-    "lint": "eslint .",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx --color .",
     "pre-commit-lint": "npx lint-staged",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prettier": "prettier --ignore-path .gitignore '**/*.+(js|jsx|json|ts|tsx|md|yml|yaml)'",
+    "style-check": "npm run prettier -- --check",
+    "style-format": "npm run prettier -- --write",
+    "style-watch": "onchange '**/*.+(js|jsx|json|ts|tsx|md|yml|yaml)' -- prettier --write {{changed}}"
   },
   "dependencies": {
     "react": "17.0.2",
